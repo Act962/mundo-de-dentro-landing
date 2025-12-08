@@ -1,13 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navbar from "@/components/landing/Navbar";
+import Hero from "@/components/landing/Hero";
+import About from "@/components/landing/About";
+import Services from "@/components/landing/Services";
+import ParentsSection from "@/components/landing/ParentsSection";
+import Team from "@/components/landing/Team";
+import Testimonials from "@/components/landing/Testimonials";
+import Contact from "@/components/landing/Contact";
+import Footer from "@/components/landing/Footer";
+import WhatsAppButton from "@/components/landing/WhatsAppButton";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>Instituto Mundo de Dentro | Neuropsicologia e Psicologia Infantil em Teresina</title>
+        <meta 
+          name="description" 
+          content="Instituto Mundo de Dentro: Avaliação neuropsicológica, neurofeedback, psicologia infantil e orientação parental em Teresina, Piauí. Cuidando do mundo interno de cada pessoa com ciência e acolhimento." 
+        />
+        <meta name="keywords" content="neuropsicologia, psicologia infantil, neurofeedback, avaliação neuropsicológica, TDAH, dislexia, Teresina, Piauí" />
+        <link rel="canonical" href="https://mundodedentro.com.br" />
+        <meta property="og:title" content="Instituto Mundo de Dentro | Neuropsicologia e Psicologia Infantil" />
+        <meta property="og:description" content="Cuidando do mundo interno de cada pessoa com ciência, acolhimento e fé." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background font-body">
+        <Navbar />
+        <main>
+          <div id="hero">
+            <Hero />
+          </div>
+          <About />
+          <Services />
+          <ParentsSection />
+          <Team />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+        <WhatsAppButton />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Brain, Heart, Sparkles } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   const handleWhatsApp = () => {
@@ -8,6 +9,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen bg-hero-gradient overflow-hidden">
+      {/* Background image with opacity */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      
+      {/* Overlay gradient for better readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/60" />
+      
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-brand-blue-light blob animate-float" />

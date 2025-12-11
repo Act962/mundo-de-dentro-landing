@@ -4,76 +4,91 @@
 
 @layer base {
   :root {
-    --background: 45 30% 98%;
-    --foreground: 240 20% 20%;
+    /* Instituto Mundo de Dentro - Cores da Marca */
+    /* Azul: #1a3e7d | Vermelho: #e32a3e | Laranja: #d38518 */
+    
+    --background: 220 30% 98%;
+    --foreground: 218 66% 20%;
     --card: 0 0% 100%;
-    --card-foreground: 240 20% 20%;
+    --card-foreground: 218 66% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 20% 20%;
-    --primary: 15 80% 65%;
+    --popover-foreground: 218 66% 20%;
+    
+    /* Azul como primário - Profissional e Confiável */
+    --primary: 218 66% 30%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 40% 90%;
-    --secondary-foreground: 270 30% 30%;
-    --accent: 160 40% 85%;
-    --accent-foreground: 160 30% 25%;
-    --muted: 45 20% 94%;
-    --muted-foreground: 240 10% 45%;
-    --destructive: 0 84% 60%;
+    
+    /* Vermelho para CTAs e Destaques */
+    --secondary: 354 78% 53%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Laranja para Acentos Quentes */
+    --accent: 35 80% 46%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 220 20% 94%;
+    --muted-foreground: 218 30% 40%;
+    --destructive: 354 78% 53%;
     --destructive-foreground: 0 0% 100%;
-    --border: 45 20% 88%;
-    --input: 45 20% 88%;
-    --ring: 15 80% 65%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 218 66% 30%;
     --radius: 1rem;
-    --brand-coral: 15 80% 65%;
-    --brand-lavender: 270 40% 80%;
-    --brand-mint: 160 45% 75%;
-    --brand-peach: 25 90% 88%;
-    --brand-cream: 45 30% 96%;
-    --brand-sky: 200 60% 80%;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 15 80% 65%;
+    
+    /* Brand Colors */
+    --brand-blue: 218 66% 30%;
+    --brand-blue-light: 218 50% 92%;
+    --brand-red: 354 78% 53%;
+    --brand-red-light: 354 60% 94%;
+    --brand-orange: 35 80% 46%;
+    --brand-orange-light: 35 70% 92%;
+    --brand-cream: 45 40% 97%;
+    
+    --sidebar-background: 218 66% 30%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 35 80% 46%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 40% 85%;
-    --sidebar-accent-foreground: 160 30% 25%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 15 80% 65%;
+    --sidebar-accent: 354 78% 53%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 218 50% 40%;
+    --sidebar-ring: 35 80% 46%;
   }
 
   .dark {
-    --background: 240 15% 10%;
-    --foreground: 45 20% 95%;
-    --card: 240 15% 13%;
-    --card-foreground: 45 20% 95%;
-    --popover: 240 15% 13%;
-    --popover-foreground: 45 20% 95%;
-    --primary: 15 75% 60%;
+    --background: 218 40% 8%;
+    --foreground: 220 20% 95%;
+    --card: 218 40% 12%;
+    --card-foreground: 220 20% 95%;
+    --popover: 218 40% 12%;
+    --popover-foreground: 220 20% 95%;
+    --primary: 218 60% 45%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 30% 25%;
-    --secondary-foreground: 270 40% 90%;
-    --accent: 160 35% 25%;
-    --accent-foreground: 160 40% 90%;
-    --muted: 240 15% 18%;
-    --muted-foreground: 45 15% 65%;
-    --destructive: 0 70% 50%;
+    --secondary: 354 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 35 75% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 218 30% 18%;
+    --muted-foreground: 220 15% 65%;
+    --destructive: 354 70% 50%;
     --destructive-foreground: 0 0% 100%;
-    --border: 240 15% 20%;
-    --input: 240 15% 20%;
-    --ring: 15 75% 60%;
-    --brand-coral: 15 75% 55%;
-    --brand-lavender: 270 35% 45%;
-    --brand-mint: 160 40% 40%;
-    --brand-peach: 25 70% 25%;
-    --brand-cream: 45 20% 15%;
-    --brand-sky: 200 50% 40%;
-    --sidebar-background: 240 15% 10%;
-    --sidebar-foreground: 45 20% 95%;
-    --sidebar-primary: 15 75% 60%;
+    --border: 218 30% 20%;
+    --input: 218 30% 20%;
+    --ring: 218 60% 45%;
+    --brand-blue: 218 60% 45%;
+    --brand-blue-light: 218 40% 20%;
+    --brand-red: 354 70% 55%;
+    --brand-red-light: 354 50% 20%;
+    --brand-orange: 35 75% 50%;
+    --brand-orange-light: 35 60% 20%;
+    --brand-cream: 218 30% 12%;
+    --sidebar-background: 218 40% 8%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 35 75% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 160 35% 25%;
-    --sidebar-accent-foreground: 160 40% 90%;
-    --sidebar-border: 240 15% 20%;
-    --sidebar-ring: 15 75% 60%;
+    --sidebar-accent: 354 70% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 218 30% 20%;
+    --sidebar-ring: 35 75% 50%;
   }
 }
 
@@ -83,10 +98,12 @@
 }
 
 @layer utilities {
-  .text-gradient { @apply bg-clip-text text-transparent; background-image: linear-gradient(135deg, hsl(var(--brand-coral)) 0%, hsl(var(--brand-lavender)) 100%); }
-  .bg-hero-gradient { background: linear-gradient(135deg, hsl(var(--brand-peach)) 0%, hsl(var(--brand-cream)) 50%, hsl(var(--brand-lavender) / 0.3) 100%); }
-  .shadow-soft { box-shadow: 0 4px 20px -4px hsl(var(--brand-coral) / 0.15); }
-  .shadow-card { box-shadow: 0 8px 30px -8px hsl(240 20% 20% / 0.1); }
+  .text-gradient { @apply bg-clip-text text-transparent; background-image: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-red)) 100%); }
+  .bg-hero-gradient { background: linear-gradient(135deg, hsl(var(--brand-blue-light)) 0%, hsl(var(--brand-cream)) 40%, hsl(var(--brand-orange-light)) 100%); }
+  .bg-section-gradient { background: linear-gradient(180deg, hsl(var(--brand-cream)) 0%, hsl(var(--background)) 100%); }
+  .shadow-soft { box-shadow: 0 4px 20px -4px hsl(var(--brand-blue) / 0.15); }
+  .shadow-card { box-shadow: 0 8px 30px -8px hsl(var(--brand-blue) / 0.1); }
+  .shadow-card-hover { box-shadow: 0 12px 40px -8px hsl(var(--brand-blue) / 0.2); }
   .blob { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
   .blob-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
   .animate-float { animation: float 6s ease-in-out infinite; }

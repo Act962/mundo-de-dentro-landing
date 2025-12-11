@@ -38,8 +38,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-28 h-28 bg-brand-lavender/20 blob animate-float pointer-events-none" />
-      <div className="absolute bottom-10 left-20 w-20 h-20 bg-brand-coral/20 blob-2 animate-float-delayed pointer-events-none" />
+      <div className="absolute top-20 right-10 w-28 h-28 bg-brand-blue-light blob animate-float pointer-events-none" />
+      <div className="absolute bottom-10 left-20 w-20 h-20 bg-brand-red-light blob-2 animate-float-delayed pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

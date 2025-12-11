@@ -43,8 +43,8 @@ const ParentsSection = () => {
   return (
     <section id="parents" className="py-20 bg-card relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-5 w-20 h-20 bg-brand-mint/20 blob animate-float pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-28 h-28 bg-brand-coral/20 blob-2 animate-float-delayed pointer-events-none" />
+      <div className="absolute top-20 left-5 w-20 h-20 bg-brand-orange-light blob animate-float pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-28 h-28 bg-brand-red-light blob-2 animate-float-delayed pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

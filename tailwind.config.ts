@@ -20,7 +20,7 @@ export default {
         accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
-        brand: { coral: "hsl(var(--brand-coral))", lavender: "hsl(var(--brand-lavender))", mint: "hsl(var(--brand-mint))", peach: "hsl(var(--brand-peach))", cream: "hsl(var(--brand-cream))", sky: "hsl(var(--brand-sky))" },
+        brand: { blue: "hsl(var(--brand-blue))", "blue-light": "hsl(var(--brand-blue-light))", red: "hsl(var(--brand-red))", "red-light": "hsl(var(--brand-red-light))", orange: "hsl(var(--brand-orange))", "orange-light": "hsl(var(--brand-orange-light))", cream: "hsl(var(--brand-cream))" },
         sidebar: { DEFAULT: "hsl(var(--sidebar-background))", foreground: "hsl(var(--sidebar-foreground))", primary: "hsl(var(--sidebar-primary))", "primary-foreground": "hsl(var(--sidebar-primary-foreground))", accent: "hsl(var(--sidebar-accent))", "accent-foreground": "hsl(var(--sidebar-accent-foreground))", border: "hsl(var(--sidebar-border))", ring: "hsl(var(--sidebar-ring))" },
       },
       fontFamily: { display: ["Fredoka", "sans-serif"], body: ["Nunito", "sans-serif"] },

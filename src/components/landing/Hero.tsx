@@ -10,14 +10,14 @@ const Hero = () => {
     <section className="relative min-h-screen bg-hero-gradient overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-lavender/30 blob animate-float" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-brand-mint/40 blob-2 animate-float-delayed" />
-        <div className="absolute bottom-40 left-1/4 w-20 h-20 bg-brand-coral/20 blob animate-float" />
-        <div className="absolute bottom-20 right-1/3 w-16 h-16 bg-brand-sky/30 blob-2 animate-float-delayed" />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-blue-light blob animate-float" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-brand-orange-light blob-2 animate-float-delayed" />
+        <div className="absolute bottom-40 left-1/4 w-20 h-20 bg-brand-red-light blob animate-float" />
+        <div className="absolute bottom-20 right-1/3 w-16 h-16 bg-brand-blue-light blob-2 animate-float-delayed" />
         
         {/* Stars */}
-        <Sparkles className="absolute top-32 right-1/4 w-8 h-8 text-brand-coral/40 animate-pulse-soft" />
-        <Sparkles className="absolute top-60 left-1/3 w-6 h-6 text-brand-lavender/50 animate-pulse-soft" />
+        <Sparkles className="absolute top-32 right-1/4 w-8 h-8 text-accent/40 animate-pulse-soft" />
+        <Sparkles className="absolute top-60 left-1/3 w-6 h-6 text-secondary/50 animate-pulse-soft" />
       </div>
 
       <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">

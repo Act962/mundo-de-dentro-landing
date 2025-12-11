@@ -22,8 +22,8 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 bg-card relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-32 h-32 bg-brand-coral/10 blob animate-float pointer-events-none" />
-      <div className="absolute bottom-10 right-20 w-24 h-24 bg-brand-mint/20 blob-2 animate-float-delayed pointer-events-none" />
+      <div className="absolute top-10 left-10 w-32 h-32 bg-brand-blue-light blob animate-float pointer-events-none" />
+      <div className="absolute bottom-10 right-20 w-24 h-24 bg-brand-orange-light blob-2 animate-float-delayed pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

@@ -43,8 +43,8 @@ const Team = () => {
   return (
     <section id="team" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 right-20 w-24 h-24 bg-brand-lavender/30 blob animate-float pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-20 h-20 bg-brand-peach/40 blob-2 animate-float-delayed pointer-events-none" />
+      <div className="absolute top-10 right-20 w-24 h-24 bg-brand-blue-light blob animate-float pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-20 h-20 bg-brand-orange-light blob-2 animate-float-delayed pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

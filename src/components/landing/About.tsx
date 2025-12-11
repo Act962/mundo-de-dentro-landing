@@ -5,37 +5,37 @@ const values = [
     icon: Lightbulb,
     title: "Ciência com Propósito",
     description: "Atuamos com rigor técnico e práticas baseadas em evidências.",
-    color: "bg-brand-coral/20 text-primary",
+    color: "bg-brand-blue-light text-primary",
   },
   {
     icon: Heart,
     title: "Acolhimento",
     description: "Escutamos cada história com empatia e respeito.",
-    color: "bg-brand-lavender/30 text-secondary-foreground",
+    color: "bg-brand-red-light text-secondary",
   },
   {
     icon: Sparkles,
     title: "Fé que Fortalece",
     description: "Reconhecemos a fé como força que sustenta jornadas.",
-    color: "bg-brand-mint/30 text-accent-foreground",
+    color: "bg-brand-orange-light text-accent",
   },
   {
     icon: Shield,
     title: "Ética e Sigilo",
     description: "Transparência e confidencialidade em todas as decisões.",
-    color: "bg-brand-sky/30 text-foreground",
+    color: "bg-brand-blue-light text-primary",
   },
   {
     icon: Users,
     title: "Interdisciplinaridade",
     description: "Caminhamos ao lado da escola, saúde e família.",
-    color: "bg-brand-peach text-foreground",
+    color: "bg-brand-red-light text-secondary",
   },
   {
     icon: Zap,
     title: "Inovação Responsável",
     description: "Tecnologia de forma criteriosa, segura e embasada.",
-    color: "bg-brand-lavender/30 text-secondary-foreground",
+    color: "bg-brand-orange-light text-accent",
   },
 ];
 
@@ -61,8 +61,8 @@ const About = () => {
 
         {/* Philosophy */}
         <div className="bg-hero-gradient rounded-3xl p-8 md:p-12 mb-16 shadow-card relative overflow-hidden">
-          <div className="absolute top-4 right-4 w-20 h-20 bg-brand-coral/20 blob animate-float" />
-          <div className="absolute bottom-4 left-4 w-16 h-16 bg-brand-mint/20 blob-2 animate-float-delayed" />
+          <div className="absolute top-4 right-4 w-20 h-20 bg-brand-blue-light blob animate-float" />
+          <div className="absolute bottom-4 left-4 w-16 h-16 bg-brand-orange-light blob-2 animate-float-delayed" />
           
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <Sparkles className="w-10 h-10 text-primary mx-auto mb-4" />

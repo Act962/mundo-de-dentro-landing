@@ -7,29 +7,29 @@ const featuredServices = [
     icon: Brain,
     title: "Avaliação Neuropsicológica",
     description: "Um 'mapa do cérebro' que mostra como a criança funciona: atenção, memória, linguagem, raciocínio, organização e comportamento.",
-    color: "bg-brand-coral/20",
+    color: "bg-brand-blue-light",
     iconColor: "text-primary",
   },
   {
     icon: Activity,
     title: "Neurofeedback",
     description: "Treina o cérebro como uma academia mental. A criança aprende a se concentrar melhor, controlar ansiedade e reduzir impulsividade.",
-    color: "bg-brand-lavender/30",
-    iconColor: "text-secondary-foreground",
+    color: "bg-brand-red-light",
+    iconColor: "text-secondary",
   },
   {
     icon: Heart,
     title: "Psicologia Infantil e Adolescente",
     description: "Acompanhamento emocional e comportamental focado em autorregulação, habilidades sociais, emoções, rotina e autoestima.",
-    color: "bg-brand-mint/30",
-    iconColor: "text-accent-foreground",
+    color: "bg-brand-orange-light",
+    iconColor: "text-accent",
   },
   {
     icon: BookOpen,
     title: "Sala de Estudo Assistido - TDAH",
     description: "Ambiente estruturado para organizar tarefas, revisar conteúdos, aprender métodos de estudo e manter a rotina escolar.",
-    color: "bg-brand-sky/30",
-    iconColor: "text-foreground",
+    color: "bg-brand-blue-light",
+    iconColor: "text-primary",
   },
 ];
 
@@ -72,8 +72,8 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 bg-brand-peach/50 blob animate-float pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-24 h-24 bg-brand-lavender/30 blob-2 animate-float-delayed pointer-events-none" />
+      <div className="absolute top-10 right-10 w-32 h-32 bg-brand-orange-light blob animate-float pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-brand-blue-light blob-2 animate-float-delayed pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

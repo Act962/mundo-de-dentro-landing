@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Brain, Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo_mundo_de_dentro.svg";
 
 const navLinks = [
   { label: "Início", id: "hero" },
@@ -47,12 +48,11 @@ const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-2 group"
           >
-            <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Brain className="w-5 h-5 text-primary" />
-            </div>
-            <span className="font-display font-bold text-foreground hidden sm:block">
-              Mundo de Dentro
-            </span>
+            <img 
+              src={logo} 
+              alt="Instituto Mundo de Dentro" 
+              className="h-10 sm:h-12 w-auto group-hover:scale-105 transition-transform"
+            />
           </button>
 
           {/* Desktop Navigation */}

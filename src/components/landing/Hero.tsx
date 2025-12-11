@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Brain, Heart, Sparkles } from "lucide-react";
+import { MessageCircle, Heart, Sparkles, Award } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import logo from "@/assets/logo_mundo_de_dentro.svg";
 
 const Hero = () => {
   const handleWhatsApp = () => {
@@ -32,18 +33,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 pt-32 pb-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo placeholder */}
+          {/* Logo */}
           <div className="mb-8 flex justify-center">
-            <div className="w-28 h-28 rounded-full bg-card shadow-card flex items-center justify-center">
-              <Brain className="w-14 h-14 text-primary" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Instituto Mundo de Dentro" 
+              className="w-64 md:w-80 lg:w-96 h-auto"
+            />
           </div>
-
-          {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
-            Instituto{" "}
-            <span className="text-gradient">Mundo de Dentro</span>
-          </h1>
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-muted-foreground font-body mb-4">
@@ -81,7 +78,7 @@ const Hero = () => {
           <div className="mt-16 flex flex-wrap justify-center gap-8">
             <div className="flex items-center gap-2 text-muted-foreground">
               <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <Brain className="w-5 h-5 text-accent-foreground" />
+                <Award className="w-5 h-5 text-accent-foreground" />
               </div>
               <span className="font-body">+20 anos de experiência</span>
             </div>

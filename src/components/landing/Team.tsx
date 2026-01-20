@@ -1,5 +1,13 @@
 import { User } from "lucide-react";
 
+// Import team photos
+import talitaPhoto from "@/assets/team/talita-iglesias.jpg";
+import mauraPhoto from "@/assets/team/maura-gisele.jpg";
+import simonePhoto from "@/assets/team/simone-rodrigues.jpg";
+import isadoraPhoto from "@/assets/team/isadora.jpg";
+import joabePhoto from "@/assets/team/joabe-martins.jpg";
+import moisesPhoto from "@/assets/team/moises-rego.jpg";
+
 const teamMembers = [
   {
     name: "Dra. Kennya Martins",
@@ -12,7 +20,7 @@ const teamMembers = [
     name: "Talita Iglesias",
     role: "Psicóloga e Neuropsicóloga",
     specialties: ["Neuropsicologia", "Avaliação"],
-    photo: null,
+    photo: talitaPhoto,
   },
   {
     name: "Cecilia Sardinha",
@@ -24,31 +32,31 @@ const teamMembers = [
     name: "Maura Gisele",
     role: "Pedagoga e Neuropsicopedagoga",
     specialties: ["Neuropsicopedagogia"],
-    photo: null,
+    photo: mauraPhoto,
   },
   {
     name: "Simone Rodrigues",
     role: "Recepcionista",
     specialties: ["Recepção"],
-    photo: null,
+    photo: simonePhoto,
   },
   {
     name: "Isadora",
     role: "Recepcionista",
     specialties: ["Recepção"],
-    photo: null,
+    photo: isadoraPhoto,
   },
   {
     name: "Joabe Martins",
     role: "Treinador Neurofeedback",
     specialties: ["Neurofeedback"],
-    photo: null,
+    photo: joabePhoto,
   },
   {
     name: "Moisés Rêgo",
     role: "Tutor",
     specialties: ["Sala de Estudo Assistido"],
-    photo: null,
+    photo: moisesPhoto,
   },
 ];
 
@@ -82,15 +90,25 @@ const Team = () => {
                 member.isLeader ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
             >
-              {/* Photo placeholder */}
+              {/* Photo */}
               <div className="relative mb-6">
-                <div className={`w-24 h-24 mx-auto rounded-full ${
-                  member.isLeader ? "bg-primary/20" : "bg-muted"
-                } flex items-center justify-center group-hover:scale-105 transition-transform`}>
-                  <User className={`w-12 h-12 ${
-                    member.isLeader ? "text-primary" : "text-muted-foreground"
-                  }`} />
-                </div>
+                {member.photo ? (
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden group-hover:scale-105 transition-transform">
+                    <img 
+                      src={member.photo} 
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div className={`w-24 h-24 mx-auto rounded-full ${
+                    member.isLeader ? "bg-primary/20" : "bg-muted"
+                  } flex items-center justify-center group-hover:scale-105 transition-transform`}>
+                    <User className={`w-12 h-12 ${
+                      member.isLeader ? "text-primary" : "text-muted-foreground"
+                    }`} />
+                  </div>
+                )}
                 {member.isLeader && (
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                     <span className="text-primary-foreground text-xs">★</span>

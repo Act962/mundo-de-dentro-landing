@@ -6,36 +6,49 @@ const teamMembers = [
     role: "Psicóloga e Neuropsicóloga",
     specialties: ["Neurofeedback", "Psicologia Infantil", "Avaliação Neuropsicológica"],
     isLeader: true,
+    photo: null,
   },
   {
     name: "Talita Iglesias",
     role: "Psicóloga e Neuropsicóloga",
     specialties: ["Neuropsicologia", "Avaliação"],
+    photo: null,
   },
   {
     name: "Cecilia Sardinha",
     role: "Psicóloga",
     specialties: ["Orientação Parental"],
+    photo: null,
   },
   {
     name: "Maura Gisele",
     role: "Pedagoga e Neuropsicopedagoga",
     specialties: ["Neuropsicopedagogia"],
+    photo: null,
   },
   {
     name: "Simone Rodrigues",
-    role: "Pedagoga",
-    specialties: ["Pedagogia"],
+    role: "Recepcionista",
+    specialties: ["Recepção"],
+    photo: null,
+  },
+  {
+    name: "Isadora",
+    role: "Recepcionista",
+    specialties: ["Recepção"],
+    photo: null,
   },
   {
     name: "Joabe Martins",
     role: "Treinador Neurofeedback",
     specialties: ["Neurofeedback"],
+    photo: null,
   },
   {
     name: "Moisés Rêgo",
     role: "Tutor",
     specialties: ["Sala de Estudo Assistido"],
+    photo: null,
   },
 ];
 

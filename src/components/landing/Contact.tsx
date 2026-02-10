@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5500000000000", "_blank");
+    window.open("https://wa.me/5586981181575", "_blank");
   };
 
   return (
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">WhatsApp</h3>
-                  <p className="text-muted-foreground font-body">(00) 00000-0000</p>
+                  <p className="text-muted-foreground font-body">(86) 98118-1575</p>
                   <p className="text-primary text-sm font-body">Clique para conversar →</p>
                 </div>
               </div>

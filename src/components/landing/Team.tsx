@@ -7,6 +7,7 @@ import simonePhoto from "@/assets/team/simone-rodrigues.jpg";
 import isadoraPhoto from "@/assets/team/isadora.jpg";
 import joabePhoto from "@/assets/team/joabe-martins.jpg";
 import moisesPhoto from "@/assets/team/moises-rego.jpg";
+import kennyaPhoto from "@/assets/team/kennya-martins.jpg";
 
 const teamMembers = [
   {
@@ -14,7 +15,7 @@ const teamMembers = [
     role: "Psicóloga e Neuropsicóloga",
     specialties: ["Neurofeedback", "Psicologia Infantil", "Avaliação Neuropsicológica"],
     isLeader: true,
-    photo: null,
+    photo: kennyaPhoto,
   },
   {
     name: "Talita Iglesias",

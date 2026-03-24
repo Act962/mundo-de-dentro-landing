@@ -48,12 +48,6 @@ const teamMembers = [
     photo: isadoraPhoto,
   },
   {
-    name: "Joabe Martins",
-    role: "Treinador Neurofeedback",
-    specialties: ["Neurofeedback"],
-    photo: joabePhoto,
-  },
-  {
     name: "Moisés Rêgo",
     role: "Tutor",
     specialties: ["Sala de Estudo Assistido"],

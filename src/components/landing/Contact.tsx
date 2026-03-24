@@ -177,15 +177,19 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Google Maps Placeholder */}
+        {/* Google Maps */}
         <div className="mt-12">
-          <div className="bg-muted rounded-2xl h-64 md:h-80 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-              <p className="text-muted-foreground font-body">
-                Mapa será adicionado com o endereço completo
-              </p>
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.177013074035!2d-42.78161138876413!3d-5.075041251484982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e3b3e7aa71863%3A0x5e5866124309f18e!2sInstituto%20Mundo%20de%20Dentro%20-%20Neuropsicologia%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1774383885058!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização do Instituto Mundo de Dentro"
+            />
           </div>
         </div>
       </div>

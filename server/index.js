@@ -147,3 +147,7 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(DIST_PATH, "index.html"));
   });
 }
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

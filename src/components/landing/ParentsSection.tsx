@@ -1,4 +1,9 @@
 import { AlertCircle, BookOpen, Brain, Heart, Lightbulb, Users } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
+
+const iconMap: Record<string, any> = {
+  AlertCircle, BookOpen, Brain, Heart, Lightbulb, Users
+};
 
 const approaches = [
   {
@@ -40,6 +45,15 @@ const warningSignals = [
 ];
 
 const ParentsSection = () => {
+  const { content } = useContent();
+  const data = content?.parents || {
+    subtitle: "Para Pais e Responsáveis",
+    title: "Entendendo Cada Abordagem",
+    description: "Sabemos que pode ser difícil...",
+    approaches: [],
+    warning_signals: []
+  };
+
   return (
     <section id="parents" className="py-20 bg-card relative overflow-hidden">
       {/* Decorative elements */}
@@ -49,35 +63,37 @@ const ParentsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent rounded-full text-accent-foreground text-sm font-body mb-4">
-            Para Pais e Responsáveis
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Entendendo Cada Abordagem
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Sabemos que pode ser difícil entender as diferentes abordagens. 
-            Preparamos explicações simples para ajudar você.
+            {data.description}
           </p>
         </div>
 
         {/* Approaches Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {approaches.map((approach, index) => (
-            <div
-              key={approach.title}
-              className="bg-background rounded-2xl p-6 shadow-card hover:shadow-soft transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4">
-                <approach.icon className="w-6 h-6 text-secondary-foreground" />
+          {data.approaches.map((approach: any, index: number) => {
+            const Icon = iconMap[approach.icon] || Heart;
+            return (
+              <div
+                key={approach.title}
+                className="bg-background rounded-2xl p-6 shadow-card hover:shadow-soft transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-secondary-foreground" />
+                </div>
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                  {approach.title}
+                </h3>
+                <p className="text-muted-foreground font-body text-sm leading-relaxed">
+                  {approach.description}
+                </p>
               </div>
-              <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                {approach.title}
-              </h3>
-              <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                {approach.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Warning Signals */}
@@ -96,7 +112,7 @@ const ParentsSection = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {warningSignals.map((signal, index) => (
+            {data.warning_signals.map((signal: string, index: number) => (
               <div
                 key={index}
                 className="flex items-start gap-3 bg-card/80 rounded-xl p-4"

@@ -1,4 +1,5 @@
 import { Quote, Star } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
 
 const testimonials = [
   {
@@ -19,6 +20,14 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { content } = useContent();
+  const data = content?.testimonials || {
+    subtitle: "Depoimentos",
+    title: "O Que as Famílias Dizem",
+    description: "Histórias reais...",
+    list: []
+  };
+
   return (
     <section id="testimonials" className="py-20 bg-card relative overflow-hidden">
       {/* Decorative elements */}
@@ -28,18 +37,18 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-body mb-4">
-            Depoimentos
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            O Que as Famílias Dizem
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Histórias reais de famílias que encontraram apoio e transformação conosco.
+            {data.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {data.list.map((testimonial: any, index: number) => (
             <div
               key={index}
               className="bg-background rounded-3xl p-8 shadow-card hover:shadow-soft transition-all duration-300 relative"

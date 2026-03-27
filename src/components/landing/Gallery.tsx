@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
 
 import espaco28 from "@/assets/espaco-28.jpg";
 import espaco35 from "@/assets/espaco-35.jpg";
@@ -18,16 +19,26 @@ const photos = [
 ];
 
 const Gallery = () => {
+  const { content } = useContent();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const data = content?.gallery || {
+    subtitle: "Nosso Espaço",
+    title: "Conheça Nossa Estrutura",
+    description: "Ambientes planejados...",
+    photos: []
+  };
+
+  const images = data.photos.length > 0 ? data.photos : photos;
 
   const openLightbox = (index: number) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
 
   const goNext = () => {
-    if (lightboxIndex !== null) setLightboxIndex((lightboxIndex + 1) % photos.length);
+    if (lightboxIndex !== null) setLightboxIndex((lightboxIndex + 1) % images.length);
   };
   const goPrev = () => {
-    if (lightboxIndex !== null) setLightboxIndex((lightboxIndex - 1 + photos.length) % photos.length);
+    if (lightboxIndex !== null) setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
   };
 
   return (
@@ -37,19 +48,19 @@ const Gallery = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-brand-orange-light text-accent px-4 py-2 rounded-full text-sm font-semibold font-display mb-4">
             <Camera className="w-4 h-4" />
-            Nosso Espaço
+            {data.subtitle}
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Conheça Nossa <span className="text-primary">Estrutura</span>
+            {data.title}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-body">
-            Ambientes planejados com carinho para proporcionar conforto, acolhimento e estímulo ao desenvolvimento.
+            {data.description}
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 max-w-5xl mx-auto">
-          {photos.map((photo, index) => (
+          {images.map((photo: any, index: number) => (
             <button
               key={index}
               onClick={() => openLightbox(index)}
@@ -108,7 +119,7 @@ const Gallery = () => {
           </button>
 
           <div className="absolute bottom-6 text-white/70 text-sm font-body">
-            {lightboxIndex + 1} / {photos.length}
+            {lightboxIndex + 1} / {images.length}
           </div>
         </div>
       )}

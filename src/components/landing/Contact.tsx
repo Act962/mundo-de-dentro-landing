@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageCircle, Mail, Clock, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useContent } from "@/hooks/useContent";
 
 const Contact = () => {
+  const { content } = useContent();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -14,6 +16,17 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const data = content?.contact || {
+    subtitle: "Contato",
+    title: "Fale Conosco",
+    description: "Estamos prontos...",
+    whatsapp: "(86) 98118-1575",
+    whatsapp_link: "https://wa.me/5586981181575",
+    email: "contato@mundodedentro.com.br",
+    hours: "Segunda a Sexta: 8h às 21h",
+    address: "Teresina, Piauí"
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +45,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/5586981181575", "_blank");
+    window.open(data.whatsapp_link, "_blank");
   };
 
   return (
@@ -44,14 +57,13 @@ const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-accent rounded-full text-accent-foreground text-sm font-body mb-4">
-            Contato
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Fale Conosco
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Estamos prontos para ajudar. Entre em contato para agendar uma consulta 
-            ou tirar suas dúvidas.
+            {data.description}
           </p>
         </div>
 
@@ -69,7 +81,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">WhatsApp</h3>
-                  <p className="text-muted-foreground font-body">(86) 98118-1575</p>
+                  <p className="text-muted-foreground font-body">{data.whatsapp}</p>
                   <p className="text-primary text-sm font-body">Clique para conversar →</p>
                 </div>
               </div>
@@ -83,7 +95,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">E-mail</h3>
-                  <p className="text-muted-foreground font-body">contato@mundodedentro.com.br</p>
+                  <p className="text-muted-foreground font-body">{data.email}</p>
                 </div>
               </div>
             </div>
@@ -96,7 +108,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">Horário</h3>
-                  <p className="text-muted-foreground font-body">Segunda a Sexta: 8h às 21h</p>
+                  <p className="text-muted-foreground font-body">{data.hours}</p>
                 </div>
               </div>
             </div>
@@ -109,7 +121,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">Localização</h3>
-                  <p className="text-muted-foreground font-body">Teresina, Piauí</p>
+                  <p className="text-muted-foreground font-body">{data.address}</p>
                 </div>
               </div>
             </div>

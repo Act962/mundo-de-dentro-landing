@@ -1,4 +1,5 @@
 import { User } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
 
 // Import team photos
 import talitaPhoto from "@/assets/team/talita-iglesias.jpg";
@@ -56,6 +57,14 @@ const teamMembers = [
 ];
 
 const Team = () => {
+  const { content } = useContent();
+  const data = content?.team || {
+    subtitle: "Nossa Equipe",
+    title: "Profissionais Dedicados",
+    description: "Uma equipe multidisciplinar...",
+    members: []
+  };
+
   return (
     <section id="team" className="py-20 bg-background relative overflow-hidden">
       {/* Decorative elements */}
@@ -65,20 +74,19 @@ const Team = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-secondary rounded-full text-secondary-foreground text-sm font-body mb-4">
-            Nossa Equipe
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Profissionais Dedicados
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Uma equipe multidisciplinar preparada para oferecer o melhor cuidado 
-            para você e sua família.
+            {data.description}
           </p>
         </div>
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {teamMembers.map((member, index) => (
+          {data.members.map((member: any, index: number) => (
             <div
               key={member.name}
               className={`group bg-card rounded-2xl p-6 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2 ${
@@ -90,7 +98,7 @@ const Team = () => {
                 {member.photo ? (
                   <div className="w-24 h-24 mx-auto rounded-full overflow-hidden group-hover:scale-105 transition-transform">
                     <img 
-                      src={member.photo} 
+                      src={member.photo.startsWith('http') || member.photo.startsWith('/') ? member.photo : `http://localhost:3001${member.photo}`} 
                       alt={member.name}
                       className="w-full h-full object-cover object-top"
                     />
@@ -120,7 +128,7 @@ const Team = () => {
                   {member.role}
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {member.specialties.map((specialty) => (
+                  {member.specialties?.map((specialty: string) => (
                     <span
                       key={specialty}
                       className="px-3 py-1 bg-muted rounded-full text-xs text-muted-foreground font-body"

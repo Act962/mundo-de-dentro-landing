@@ -1,4 +1,9 @@
 import { Heart, Lightbulb, Users, Shield, Sparkles, Zap } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
+
+const iconMap: Record<string, any> = {
+  Heart, Lightbulb, Users, Shield, Sparkles, Zap
+};
 
 const values = [
   {
@@ -40,22 +45,34 @@ const values = [
 ];
 
 const About = () => {
+  const { content } = useContent();
+  const data = content?.about || {
+    subtitle: "Sobre Nós",
+    title: "Nossa História",
+    description: "O Instituto Mundo de Dentro surgiu...",
+    philosophy_title: "Nossa Filosofia",
+    philosophy_description: "Cada pessoa carrega um universo interno único...",
+    values: [],
+    target_audience: "Atendemos de 1 a 99 anos — crianças, adolescentes, adultos e famílias"
+  };
+
+  const valuesData = data.values.length > 0 ? data.values : [
+    { title: "Ciência com Propósito", description: "...", icon: "Lightbulb" },
+    // ... initial values
+  ];
+
   return (
     <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-2 bg-secondary rounded-full text-secondary-foreground text-sm font-body mb-4">
-            Sobre Nós
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-            Nossa História
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body leading-relaxed">
-            O Instituto Mundo de Dentro surgiu da expansão natural de uma trajetória de 
-            <strong className="text-foreground"> mais de 20 anos</strong> trabalhando com crianças, 
-            adolescentes e famílias. Nascemos como evolução, integrando neuropsicologia avançada, 
-            neurofeedback, psicologia infantojuvenil, psicopedagogia e serviços especializados 
-            em transtornos de aprendizagem.
+            {data.description}
           </p>
         </div>
 
@@ -67,14 +84,10 @@ const About = () => {
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <Sparkles className="w-10 h-10 text-primary mx-auto mb-4" />
             <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
-              Nossa Filosofia
+              {data.philosophy_title}
             </h3>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              Cada pessoa carrega um universo interno único, feito de emoções, memórias, 
-              interesses, forças e dificuldades. O que vemos "por fora" — comportamento, 
-              aprendizagem, atenção, socialização — é resultado desse <strong className="text-foreground">mundo de dentro</strong>.
-              Por isso, nosso cuidado combina ciência, acolhimento e experiência encantadora, 
-              sempre respeitando a singularidade de cada criança.
+              {data.philosophy_description}
             </p>
           </div>
         </div>
@@ -87,23 +100,26 @@ const About = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {values.map((value, index) => (
-            <div 
-              key={value.title}
-              className="group p-6 bg-background rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className={`w-14 h-14 rounded-xl ${value.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <value.icon className="w-7 h-7" />
+          {data.values.map((value: any, index: number) => {
+            const Icon = iconMap[value.icon] || Lightbulb;
+            return (
+              <div 
+                key={value.title}
+                className="group p-6 bg-background rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className={`w-14 h-14 rounded-xl bg-brand-blue-light text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className="w-7 h-7" />
+                </div>
+                <h4 className="text-lg font-display font-semibold text-foreground mb-2">
+                  {value.title}
+                </h4>
+                <p className="text-muted-foreground font-body">
+                  {value.description}
+                </p>
               </div>
-              <h4 className="text-lg font-display font-semibold text-foreground mb-2">
-                {value.title}
-              </h4>
-              <p className="text-muted-foreground font-body">
-                {value.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Target audience */}
@@ -111,7 +127,7 @@ const About = () => {
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent rounded-full">
             <Users className="w-5 h-5 text-accent-foreground" />
             <span className="font-body text-accent-foreground">
-              Atendemos de <strong>1 a 99 anos</strong> — crianças, adolescentes, adultos e famílias
+              {data.target_audience}
             </span>
           </div>
         </div>

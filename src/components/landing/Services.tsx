@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Brain, Activity, Heart, BookOpen, ChevronDown, ChevronUp, Sparkles, Users, GraduationCap, MessageCircle, School, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useContent } from "@/hooks/useContent";
+
+const iconMap: Record<string, any> = {
+  Brain, Activity, Heart, BookOpen, Sparkles, Users, GraduationCap, MessageCircle, School, Crown
+};
 
 const featuredServices = [
   {
@@ -67,7 +72,16 @@ const otherServices = [
 ];
 
 const Services = () => {
+  const { content } = useContent();
   const [showAll, setShowAll] = useState(false);
+
+  const data = content?.services || {
+    subtitle: "Nossos Serviços",
+    title: "Como Podemos Ajudar",
+    description: "Oferecemos atendimentos...",
+    featured: [],
+    others: []
+  };
 
   return (
     <section id="services" className="py-20 bg-background relative overflow-hidden">
@@ -78,40 +92,42 @@ const Services = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-body mb-4">
-            Nossos Serviços
+            {data.subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-            Como Podemos Ajudar
+            {data.title}
           </h2>
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
-            Oferecemos atendimentos presenciais e online, combinando ciência e acolhimento 
-            para cuidar do que realmente importa.
+            {data.description}
           </p>
         </div>
 
         {/* Featured Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {featuredServices.map((service, index) => (
-            <div
-              key={service.title}
-              className="group relative bg-card rounded-3xl p-8 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2 overflow-hidden"
-            >
-              {/* Background decoration */}
-              <div className={`absolute -right-8 -top-8 w-32 h-32 ${service.color} blob opacity-50 group-hover:scale-125 transition-transform duration-500`} />
-              
-              <div className="relative z-10">
-                <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className={`w-8 h-8 ${service.iconColor}`} />
+          {data.featured.map((service: any, index: number) => {
+            const Icon = iconMap[service.icon] || Brain;
+            return (
+              <div
+                key={service.title}
+                className="group relative bg-card rounded-3xl p-8 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              >
+                {/* Background decoration */}
+                <div className={`absolute -right-8 -top-8 w-32 h-32 bg-brand-blue-light blob opacity-50 group-hover:scale-125 transition-transform duration-500`} />
+                
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 rounded-2xl bg-brand-blue-light flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className={`w-8 h-8 text-primary`} />
+                  </div>
+                  <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground font-body leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-display font-bold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground font-body leading-relaxed">
-                  {service.description}
-                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Toggle more services */}
@@ -136,22 +152,25 @@ const Services = () => {
         {/* Other Services */}
         {showAll && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
-            {otherServices.map((service) => (
-              <div
-                key={service.title}
-                className="bg-card rounded-2xl p-6 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-muted-foreground" />
+            {data.others.map((service: any) => {
+              const Icon = iconMap[service.icon] || Sparkles;
+              return (
+                <div
+                  key={service.title}
+                  className="bg-card rounded-2xl p-6 shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h4 className="text-lg font-display font-semibold text-foreground mb-2">
+                    {service.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground font-body">
+                    {service.description}
+                  </p>
                 </div>
-                <h4 className="text-lg font-display font-semibold text-foreground mb-2">
-                  {service.title}
-                </h4>
-                <p className="text-sm text-muted-foreground font-body">
-                  {service.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

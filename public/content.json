@@ -1,0 +1,302 @@
+{
+  "hero": {
+    "tagline": "No Mundo de Dentro, cada cérebro conta uma história",
+    "description": "Cuidamos do mundo interno de cada pessoa com ciência, acolhimento e fé. Neuropsicologia, neurofeedback e psicologia para crianças, adolescentes, adultos e suas famílias.",
+    "cta_primary": {
+      "text": "Agendar Consulta",
+      "link": "https://wa.me/5586981181575"
+    },
+    "cta_secondary": {
+      "text": "Conhecer Serviços",
+      "link": "services"
+    },
+    "badges": [
+      "+20 anos de experiência",
+      "Atendimento humanizado"
+    ],
+    "background": "/uploads/1774619282871-488931963.png",
+    "logo": "/uploads/1774619334283-846685334.png"
+  },
+  "about": {
+    "subtitle": "Sobre Nós",
+    "title": "Nossa História",
+    "description": "O Instituto Mundo de Dentro surgiu da expansão natural de uma trajetória de mais de 20 anos trabalhando com crianças, adolescentes e famílias. Nascemos como evolução, integrando neuropsicologia avançada, neurofeedback, psicologia infantojuvenil, psicopedagogia e serviços especializados em transtornos de aprendizagem.",
+    "philosophy_title": "Nossa Filosofia",
+    "philosophy_description": "Cada pessoa carrega um universo interno único, feito de emoções, memórias, interesses, forças e dificuldades. O que vemos \"por fora\" — comportamento, aprendizagem, atenção, socialização — é resultado desse mundo de dentro. Por isso, nosso cuidado combina ciência, acolhimento e experiência encantadora, sempre respeitando a singularidade de cada criança.",
+    "values": [
+      {
+        "title": "Ciência com Propósito",
+        "description": "Atuamos com rigor técnico e práticas baseadas em evidências.",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Acolhimento",
+        "description": "Escutamos cada história com empatia e respeito.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Fé que Fortalece",
+        "description": "Reconhecemos a fé como força que sustenta jornadas.",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Ética e Sigilo",
+        "description": "Transparência e confidencialidade em todas as decisões.",
+        "icon": "Shield"
+      },
+      {
+        "title": "Interdisciplinaridade",
+        "description": "Caminhamos ao lado da escola, saúde e família.",
+        "icon": "Users"
+      },
+      {
+        "title": "Inovação Responsável",
+        "description": "Tecnologia de forma criteriosa, segura e embasada.",
+        "icon": "Zap"
+      }
+    ],
+    "target_audience": "Atendemos de 1 a 99 anos — crianças, adolescentes, adultos e famílias"
+  },
+  "services": {
+    "subtitle": "Nossos Serviços",
+    "title": "Como Podemos Ajudar",
+    "description": "Oferecemos atendimentos presenciais e online, combinando ciência e acolhimento para cuidar do que realmente importa.",
+    "featured": [
+      {
+        "title": "Avaliação Neuropsicológica",
+        "description": "Um 'mapa do cérebro' que mostra como a criança funciona: atenção, memória, linguagem, raciocínio, organização e comportamento.",
+        "icon": "Brain"
+      },
+      {
+        "title": "Neurofeedback",
+        "description": "Treina o cérebro como uma academia mental. A criança aprende a se concentrar melhor, controlar ansiedade e reduzir impulsividade.",
+        "icon": "Activity"
+      },
+      {
+        "title": "Psicologia Infantil e Adolescente",
+        "description": "Acompanhamento emocional e comportamental focado em autorregulação, habilidades sociais, emoções, rotina e autoestima.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Sala de Estudo Assistido - TDAH",
+        "description": "Ambiente estruturado para organizar tarefas, revisar conteúdos, aprender métodos de estudo e manter a rotina escolar.",
+        "icon": "BookOpen"
+      }
+    ],
+    "others": [
+      {
+        "title": "Avaliação com Realidade Virtual",
+        "description": "Ferramentas modernas para observar atenção, impulsividade e comportamento em situações próximas da vida real.",
+        "icon": "Sparkles"
+      },
+      {
+        "title": "Consultoria Escolar",
+        "description": "Acompanhamento junto à escola para adaptações, comunicação e alinhamento das necessidades da criança.",
+        "icon": "School"
+      },
+      {
+        "title": "Orientação Parental",
+        "description": "Apoio direto à família: como organizar rotina, lidar com comportamentos difíceis, telas, sono, regras e combinados.",
+        "icon": "Users"
+      },
+      {
+        "title": "Núcleo de Dislexia",
+        "description": "Avaliação e intervenção completa para dislexia e transtornos de aprendizagem com apoio escolar.",
+        "icon": "GraduationCap"
+      },
+      {
+        "title": "Escola de Princesas/Príncipes",
+        "description": "Vivências de identidade, autoestima, etiqueta, habilidades sociais e valores para crianças.",
+        "icon": "Crown"
+      },
+      {
+        "title": "Grupos Terapêuticos",
+        "description": "Espaço seguro para trabalhar convivência, expressão emocional, cooperação e resolução de conflitos.",
+        "icon": "MessageCircle"
+      }
+    ]
+  },
+  "parents": {
+    "subtitle": "Para Pais e Responsáveis",
+    "title": "Entendendo Cada Abordagem",
+    "description": "Sabemos que pode ser difícil entender as diferentes abordagens. Preparamos explicações simples para ajudar você.",
+    "approaches": [
+      {
+        "title": "Psicologia Infantil",
+        "description": "Ajuda a criança a entender emoções, melhorar comportamentos e desenvolver habilidades sociais por meio de brincadeiras e atividades lúdicas.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Neuropsicologia",
+        "description": "Mostra como a criança funciona por dentro: atenção, memória, linguagem, raciocínio, organização, comportamento e aprendizagem.",
+        "icon": "Brain"
+      },
+      {
+        "title": "Neurofeedback",
+        "description": "Treina o cérebro, como uma academia mental. A criança aprende a se concentrar melhor, controlar ansiedade e reduzir impulsividade.",
+        "icon": "Lightbulb"
+      },
+      {
+        "title": "Sala de Estudo",
+        "description": "Ajuda a criança com TDAH ou dificuldades escolares a organizar cadernos, realizar tarefas, se concentrar e criar rotina.",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Orientação Parental",
+        "description": "Apoio direto à família: como organizar rotina, lidar com comportamentos difíceis, telas, sono, regras e combinados.",
+        "icon": "Users"
+      }
+    ],
+    "warning_signals": [
+      "Dificuldade de concentração e atenção nas atividades",
+      "Problemas de comportamento em casa ou na escola",
+      "Dificuldades na leitura, escrita ou matemática",
+      "Ansiedade, medos ou mudanças de humor frequentes",
+      "Dificuldade em fazer amigos ou manter relacionamentos",
+      "Agitação excessiva ou dificuldade em ficar parado",
+      "Resistência para ir à escola ou fazer tarefas",
+      "Baixa autoestima ou falta de motivação"
+    ]
+  },
+  "gallery": {
+    "subtitle": "Nosso Espaço",
+    "title": "Conheça Nossa Estrutura",
+    "description": "Ambientes planejados com carinho para proporcionar conforto, acolhimento e estímulo ao desenvolvimento.",
+    "photos": [
+      {
+        "src": "/uploads/1774619215426-71752783.png",
+        "alt": "Sala infantil com mesa e brinquedos",
+        "label": "Sala Lúdica"
+      },
+      {
+        "src": "/assets/espaco-35.jpg",
+        "alt": "Sala de atividades em grupo com mesa laranja",
+        "label": "Sala de Grupo"
+      },
+      {
+        "src": "/assets/espaco-45.jpg",
+        "alt": "Consultório temático com decoração náutica",
+        "label": "Consultório"
+      },
+      {
+        "src": "/assets/espaco-58.jpg",
+        "alt": "Sala de neurofeedback com estações individuais",
+        "label": "Neurofeedback"
+      },
+      {
+        "src": "/assets/espaco-62.jpg",
+        "alt": "Consultório com ambiente acolhedor e sofás",
+        "label": "Consultório"
+      },
+      {
+        "src": "/assets/espaco-66.jpg",
+        "alt": "Entrada temática Mundo de Dentro",
+        "label": "Recepção"
+      }
+    ]
+  },
+  "team": {
+    "subtitle": "Nossa Equipe",
+    "title": "Profissionais Dedicados",
+    "description": "Uma equipe multidisciplinar preparada para oferecer o melhor cuidado para você e sua família.",
+    "members": [
+      {
+        "name": "Dra. Kennya Martins",
+        "role": "Psicóloga e Neuropsicóloga",
+        "specialties": [
+          "Neurofeedback",
+          "Psicologia Infantil",
+          "Avaliação Neuropsicológica"
+        ],
+        "isLeader": true,
+        "photo": "/assets/team/kennya-martins.jpg"
+      },
+      {
+        "name": "Talita Iglesias",
+        "role": "Psicóloga e Neuropsicóloga",
+        "specialties": [
+          "Neuropsicologia",
+          "Avaliação"
+        ],
+        "photo": "/assets/team/talita-iglesias.jpg"
+      },
+      {
+        "name": "Cecilia Sardinha",
+        "role": "Psicóloga",
+        "specialties": [
+          "Orientação Parental"
+        ],
+        "photo": null
+      },
+      {
+        "name": "Maura Gisele",
+        "role": "Pedagoga e Neuropsicopedagoga",
+        "specialties": [
+          "Neuropsicopedagogia"
+        ],
+        "photo": "/assets/team/maura-gisele.jpg"
+      },
+      {
+        "name": "Simone Rodrigues",
+        "role": "Recepcionista",
+        "specialties": [
+          "Recepção"
+        ],
+        "photo": "/assets/team/simone-rodrigues.jpg"
+      },
+      {
+        "name": "Isadora",
+        "role": "Recepcionista",
+        "specialties": [
+          "Recepção"
+        ],
+        "photo": "/assets/team/isadora.jpg"
+      },
+      {
+        "name": "Moisés Rêgo",
+        "role": "Tutor",
+        "specialties": [
+          "Sala de Estudo Assistido"
+        ],
+        "photo": "/assets/team/moises-rego.jpg"
+      }
+    ]
+  },
+  "testimonials": {
+    "subtitle": "Depoimentos",
+    "title": "O Que as Famílias Dizem",
+    "description": "Histórias reais de famílias que encontraram apoio e transformação conosco.",
+    "list": [
+      {
+        "text": "O atendimento foi transformador para minha filha. Ela desenvolveu muito a autoestima e hoje enfrenta os desafios da escola com mais confiança.",
+        "author": "Mãe da Maria, 8 anos",
+        "rating": 5
+      },
+      {
+        "text": "A avaliação neuropsicológica nos deu clareza sobre as dificuldades do nosso filho. A equipe foi muito acolhedora e profissional.",
+        "author": "Pai do João, 10 anos",
+        "rating": 5
+      },
+      {
+        "text": "O neurofeedback mudou a rotina de casa. Meu filho está mais focado e menos ansioso. Recomendo muito!",
+        "author": "Mãe do Pedro, 12 anos",
+        "rating": 5
+      }
+    ]
+  },
+  "contact": {
+    "subtitle": "Contato",
+    "title": "Fale Conosco",
+    "description": "Estamos prontos para ajudar. Entre em contato para agendar uma consulta ou tirar suas dúvidas.",
+    "whatsapp": "(86) 98118-1575",
+    "whatsapp_link": "https://wa.me/5586981181575",
+    "email": "contato@mundodedentro.com.br",
+    "hours": "Segunda a Sexta: 8h às 21h",
+    "address": "Teresina, Piauí"
+  },
+  "footer": {
+    "description": "Cuidando do mundo interno de cada pessoa com ciência, acolhimento e fé. Neuropsicologia, neurofeedback e psicologia para todas as idades.",
+    "tagline": "\"No Mundo de Dentro, cada cérebro conta uma história\"",
+    "copyright": "Instituto Mundo de Dentro. Todos os direitos reservados."
+  }
+}

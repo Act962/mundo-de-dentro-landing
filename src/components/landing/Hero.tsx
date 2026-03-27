@@ -2,18 +2,32 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Heart, Sparkles, Award } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import logo from "@/assets/logo_mundo_de_dentro.svg";
+import { useContent } from "@/hooks/useContent";
 
 const Hero = () => {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/5500000000000", "_blank");
+  const { content } = useContent();
+  const data = content?.hero || {
+    tagline: "No Mundo de Dentro, cada cérebro conta uma história",
+    description: "Cuidamos do mundo interno de cada pessoa com ciência, acolhimento e fé. Neuropsicologia, neurofeedback e psicologia para crianças, adolescentes, adultos e suas famílias.",
+    cta_primary: { text: "Agendar Consulta", link: "https://wa.me/5586981181575" },
+    cta_secondary: { text: "Conhecer Serviços", link: "services" },
+    badges: ["+20 anos de experiência", "Atendimento humanizado"]
   };
+
+  const handleWhatsApp = () => {
+    window.open(data.cta_primary.link, "_blank");
+  };
+
+  const bgImage = data.background 
+    ? (data.background.startsWith('http') || data.background.startsWith('/') ? data.background : `http://localhost:3001${data.background}`)
+    : heroBackground;
 
   return (
     <section className="relative min-h-screen bg-hero-gradient overflow-hidden">
       {/* Background image with opacity */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: `url(${heroBackground})` }}
+        style={{ backgroundImage: `url(${bgImage})` }}
       />
       
       {/* Overlay gradient for better readability */}
@@ -44,14 +58,12 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-muted-foreground font-body mb-4">
-            "No Mundo de Dentro, cada cérebro conta uma história"
+            "{data.tagline}"
           </p>
 
           {/* Description */}
           <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto mb-10">
-            Cuidamos do mundo interno de cada pessoa com ciência, acolhimento e fé. 
-            Neuropsicologia, neurofeedback e psicologia para crianças, adolescentes, 
-            adultos e suas famílias.
+            {data.description}
           </p>
 
           {/* CTA Buttons */}
@@ -62,15 +74,15 @@ const Hero = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft px-8 py-6 text-lg rounded-2xl gap-2"
             >
               <MessageCircle className="w-5 h-5" />
-              Agendar Consulta
+              {data.cta_primary.text}
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               className="border-2 border-primary/30 hover:bg-primary/5 px-8 py-6 text-lg rounded-2xl"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById(data.cta_secondary.link)?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Conhecer Serviços
+              {data.cta_secondary.text}
             </Button>
           </div>
 
@@ -80,13 +92,13 @@ const Hero = () => {
               <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
                 <Award className="w-5 h-5 text-accent-foreground" />
               </div>
-              <span className="font-body">+20 anos de experiência</span>
+              <span className="font-body">{data.badges[0]}</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
                 <Heart className="w-5 h-5 text-secondary-foreground" />
               </div>
-              <span className="font-body">Atendimento humanizado</span>
+              <span className="font-body">{data.badges[1]}</span>
             </div>
           </div>
         </div>

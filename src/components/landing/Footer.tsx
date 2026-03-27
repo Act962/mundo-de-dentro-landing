@@ -1,10 +1,18 @@
 import { Brain, Heart, Instagram, Facebook, Mail } from "lucide-react";
+import { useContent } from "@/hooks/useContent";
 
 const Footer = () => {
+  const { content } = useContent();
   const currentYear = new Date().getFullYear();
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const data = content?.footer || {
+    description: "Cuidando do mundo interno...",
+    tagline: "\"No Mundo de Dentro...\"",
+    copyright: "Instituto Mundo de Dentro. Todos os direitos reservados."
   };
 
   return (
@@ -22,12 +30,11 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-background/70 font-body leading-relaxed max-w-md">
-              Cuidando do mundo interno de cada pessoa com ciência, acolhimento e fé. 
-              Neuropsicologia, neurofeedback e psicologia para todas as idades.
+              {data.description}
             </p>
             <div className="flex items-center gap-2 mt-4 text-background/50 text-sm font-body">
               <Heart className="w-4 h-4 text-primary" />
-              <span>"No Mundo de Dentro, cada cérebro conta uma história"</span>
+              <span>{data.tagline}</span>
             </div>
           </div>
 
@@ -90,7 +97,7 @@ const Footer = () => {
         <div className="border-t border-background/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/50 text-sm font-body">
-              © {currentYear} Instituto Mundo de Dentro. Todos os direitos reservados.
+              © {currentYear} {data.copyright}
             </p>
             <div className="flex gap-6">
               <a

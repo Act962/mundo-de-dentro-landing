@@ -141,8 +141,7 @@ if (process.env.NODE_ENV === "production") {
   const DIST_PATH = path.join(__dirname, "../dist");
   app.use(express.static(DIST_PATH));
 
-  // Alterado de '*' para '(.*)' para compatibilidade com Express 5
-  app.get("(.*)", (req, res, next) => {
+  app.get("/*path", (req, res, next) => {
     if (req.path.startsWith("/api") || req.path.startsWith("/uploads"))
       return next();
     res.sendFile(path.join(DIST_PATH, "index.html"));

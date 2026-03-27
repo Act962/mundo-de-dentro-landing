@@ -2,7 +2,12 @@ import { Heart, Lightbulb, Users, Shield, Sparkles, Zap } from "lucide-react";
 import { useContent } from "@/hooks/useContent";
 
 const iconMap: Record<string, any> = {
-  Heart, Lightbulb, Users, Shield, Sparkles, Zap
+  Heart,
+  Lightbulb,
+  Users,
+  Shield,
+  Sparkles,
+  Zap,
 };
 
 const values = [
@@ -53,13 +58,21 @@ const About = () => {
     philosophy_title: "Nossa Filosofia",
     philosophy_description: "Cada pessoa carrega um universo interno único...",
     values: [],
-    target_audience: "Atendemos de 1 a 99 anos — crianças, adolescentes, adultos e famílias"
+    target_audience:
+      "Atendemos de 1 a 99 anos — crianças, adolescentes, adultos e famílias",
   };
 
-  const valuesData = data.values.length > 0 ? data.values : [
-    { title: "Ciência com Propósito", description: "...", icon: "Lightbulb" },
-    // ... initial values
-  ];
+  const valuesData =
+    data.values.length > 0
+      ? data.values
+      : [
+          {
+            title: "Ciência com Propósito",
+            description: "...",
+            icon: "Lightbulb",
+          },
+          // ... initial values
+        ];
 
   return (
     <section id="about" className="py-20 bg-card">
@@ -80,7 +93,7 @@ const About = () => {
         <div className="bg-hero-gradient rounded-3xl p-8 md:p-12 mb-16 shadow-card relative overflow-hidden">
           <div className="absolute top-4 right-4 w-20 h-20 bg-brand-blue-light blob animate-float" />
           <div className="absolute bottom-4 left-4 w-16 h-16 bg-brand-orange-light blob-2 animate-float-delayed" />
-          
+
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <Sparkles className="w-10 h-10 text-primary mx-auto mb-4" />
             <h3 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
@@ -98,17 +111,19 @@ const About = () => {
             Nossos Valores
           </h3>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.values.map((value: any, index: number) => {
             const Icon = iconMap[value.icon] || Lightbulb;
             return (
-              <div 
+              <div
                 key={value.title}
                 className="group p-6 bg-background rounded-2xl shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`w-14 h-14 rounded-xl bg-brand-blue-light text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <div
+                  className={`w-14 h-14 rounded-xl bg-brand-blue-light text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                >
                   <Icon className="w-7 h-7" />
                 </div>
                 <h4 className="text-lg font-display font-semibold text-foreground mb-2">
